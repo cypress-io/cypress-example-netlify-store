@@ -9,7 +9,7 @@
           <th>Total</th>
           <th></th>
         </tr>
-        <tr v-for="item in cart" :key="item.id">
+        <tr v-for="item in cart" :key="item.id" data-cy="item-in-cart">
           <td>
             <img :src="`/products/${item.img}`" :alt="item.name" class="product-img" />
             <h3 class="product-name">{{ item.name }}</h3>
@@ -22,7 +22,7 @@
             <button @click="removeOneFromCart(item)" class="quantity-adjust">
               -
             </button>
-            <strong> {{ item.quantity }}</strong>
+            <strong data-cy="item-quantity"> {{ item.quantity }}</strong>
             <button @click="addToCart(item)" class="quantity-adjust">+</button>
           </td>
           <td>{{ (item.quantity * item.price) | dollar }}</td>

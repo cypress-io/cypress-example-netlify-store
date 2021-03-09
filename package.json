@@ -8,9 +8,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:dev": "start-test dev 3000 cy:open"
   },
-    "dependencies": {
+  "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
     "gsap": "^2.1.3",
@@ -24,8 +27,9 @@
     "vue-stripe-elements-plus": "^0.3.2"
   },
   "devDependencies": {
-    "cypress": "6.5.0",
+    "cypress": "6.6.0",
     "nodemon": "^1.18.9",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "start-server-and-test": "1.12.0"
   }
 }
