@@ -2,3 +2,17 @@
   command = "yarn generate"
   functions = "functions"
   publish = "dist"
+
+# https://github.com/cypress-io/netlify-plugin-cypress
+# test the site after deploy
+
+[build.environment]
+# cache Cypress binary in local "node_modules" folder
+# so Netlify caches it
+CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+# set TERM variable for terminal output
+TERM = "xterm"
+
+[[plugins]]
+  # runs Cypress tests against the deployed URL
+  package = "netlify-plugin-cypress"
