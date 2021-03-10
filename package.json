@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "cypress": "6.6.0",
+    "netlify-plugin-cypress": "2.1.0",
     "nodemon": "^1.18.9",
     "prettier": "2.2.1",
     "start-server-and-test": "1.12.0"
