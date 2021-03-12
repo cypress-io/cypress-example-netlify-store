@@ -22,5 +22,5 @@ TERM = "xterm"
   [plugins.inputs.preBuild]
     enable = true
     # call the same commands as we do locally
-    start = 'nuxt start'
+    start = 'nuxt'
     wait-on = 'http://localhost:3000'
