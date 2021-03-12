@@ -21,6 +21,7 @@ TERM = "xterm"
   # run Cypress tests before building and deploying
   [plugins.inputs.preBuild]
     enable = true
+    record = true
     # call the same commands as we do locally
     start = 'nuxt'
     wait-on = 'http://localhost:3000'
