@@ -3,5 +3,6 @@
   "supportFile": false,
   "pluginsFile": false,
   "baseUrl": "http://localhost:3000",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "projectId": "65hrer"
 }
