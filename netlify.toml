@@ -14,7 +14,13 @@ CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 TERM = "xterm"
 
 [[plugins]]
-  # runs Cypress tests against the deployed URL
   package = "netlify-plugin-cypress"
+  # runs Cypress tests against the deployed URL
   [plugins.inputs]
     record = true
+  # run Cypress tests before building and deploying
+  [plugins.inputs.preBuild]
+    enable = true
+    # call the same commands as we do locally
+    start = 'nuxt start'
+    wait-on = 'http://localhost:3000'
