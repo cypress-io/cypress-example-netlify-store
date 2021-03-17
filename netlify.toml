@@ -16,10 +16,11 @@ TERM = "xterm"
 [[plugins]]
   # runs Cypress tests against the deployed URL
   package = "netlify-plugin-cypress"
-  # runs Cypress tests against the deployed URL
+  # runs Cypress smoke tests against the deployed URL
   [plugins.inputs]
     record = true
-  # run Cypress tests before building and deploying
+    spec = "cypress/integration/smoke/**/*.js"
+  # run all Cypress tests before building and deploying
   [plugins.inputs.preBuild]
     enable = true
     record = true
